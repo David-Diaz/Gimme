@@ -3,19 +3,20 @@ import sys
 import random
 import os.path
 
-
+# creates a function that makes the 'gimme.txt' document
 def load_items_from_file(filename = 'gimme.txt'):
   if (os.path.isfile(filename)):
     contents = open(filename)
+    #Reads the lines
     return contents.readlines()
-  return []
+  #Blank list
+  return [] 
 
 def add_item(item, filename = 'gimme.txt'):
   if (item in items):
     return
-  if(os.path.isfile(filename)):
-    with open(filename, "a") as target:
-      target.write(item + '\n')
+  with open(filename, "a") as item_file:
+    item_file.write(item + '\n')
 
 
 done = []
