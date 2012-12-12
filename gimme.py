@@ -4,14 +4,10 @@ import random
 import os.path
 import os
 
-# creates a function that makes the 'gimme.txt' document
 def load_items_from_file(filename = 'gimme.txt'):
   if (os.path.isfile(filename)):
     contents = open(filename)
-    #Reads the lines
     return contents.readlines()
-  #Blank list
-  #from_file = contents.read(filename)
   return [] 
 
 def add_item(item, filename = 'gimme.txt'):
