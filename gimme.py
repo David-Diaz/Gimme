@@ -2,6 +2,7 @@ from sys import argv
 import sys
 import random
 import os.path
+import os
 
 # creates a function that makes the 'gimme.txt' document
 def load_items_from_file(filename = 'gimme.txt'):
@@ -10,6 +11,7 @@ def load_items_from_file(filename = 'gimme.txt'):
     #Reads the lines
     return contents.readlines()
   #Blank list
+  #from_file = contents.read(filename)
   return [] 
 
 def add_item(item, filename = 'gimme.txt'):
@@ -42,19 +44,24 @@ try:
 except ValueError:
   print 'Did not ask for items, continuing...'
 
-
 while input != 'q' and input != 'x':
-  input = raw_input('what you wanna do? ')
+  input = raw_input('\nWhat do you want to do? ')
   if input == 'g' or input == 'l':
-    print 'getting items'
+      print 'Getting list...'
+      print new_item
   if input == 'n' or input == 'a':
-    new_item = raw_input("What do you wana add? ")
+    new_item = raw_input("\nWhat do you wana add? ")
     add_item(new_item)
     load_items_from_file()
+  if input == 'd' or input == 'r':
+    exit_or_not = raw_input("Are you sure you want to delete your file?y/n")
+    if exit_or_not =='y':
+      os.remove('gimme.txt')
+      print "deleted!"
 
+  if input == '-h' or input == 'help':
+    print """ g, l = get list \\ n, a = add  \n d, r = delete \\ y, n = yes/no
+    """
+    
 print 'exiting...'
 
-#items = load_items_from_file()
-#item1 = raw_input("Task/Item: ")
-#item2 = raw_input("Task/Item: ")
-#print items
