@@ -50,12 +50,12 @@ while input != 'q' and input != 'x':
     add_item(new_item)
     load_items_from_file()
   if input == 'd' or input == 'r':
-    exit_or_not = raw_input("Are you sure you want to delete your file?y/n")
+    exit_or_not = raw_input("Are you sure you want to delete your file?(y/n): ")
     if exit_or_not =='y':
       os.remove('gimme.txt')
       print "deleted!"
 
-  if input == '-h' or input == 'help':
+  if input == '-i' or input == 'info':
     print """ g, l = get list \\ n, a = add  \n d, r = delete \\ y, n = yes/no
     """
     
