@@ -44,7 +44,12 @@ while input != 'q' and input != 'x':
   input = raw_input('\nWhat do you want to do? ')
   if input == 'g' or input == 'l':
       print 'Getting list...'
-      print new_item
+      
+  if os.path.exists('gimme.txt'):
+      filename = open('gimme.txt')
+      print filename.read()
+  else:
+      print "No file"
   if input == 'n' or input == 'a':
     new_item = raw_input("\nWhat do you wana add? ")
     add_item(new_item)
