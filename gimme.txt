@@ -1,3 +1,1 @@
-code
-eat
-sleep
+This is the file that holds all your items. You can delete this one when you press r.
