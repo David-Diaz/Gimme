@@ -1,1 +1,2 @@
-This is the file that holds all your items. You can delete this one when you press r.
+This is the file that holds all your items. You can delete this by pressing "r". Start adding items/task and let
+the decision maker do it's job!
