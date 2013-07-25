@@ -35,6 +35,10 @@ input = ''
 try:
   filename, count = argv
   m = int(float(count))
+  """ 
+  Fix this
+  print argv
+  """
   get_items(m)
   sys.exit(0)
 except ValueError:
@@ -42,7 +46,7 @@ except ValueError:
 
 while input != 'q' and input != 'x':
   input = raw_input('\nWhat do you want to do? ')
-  if input == 'g' or input == 'l':
+  if input == 'g' or input == 'l' or input == 'ls':
       print 'Getting list...'
       
   if os.path.exists('gimme.txt'):
