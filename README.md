@@ -1,4 +1,3 @@
 Gimme
 =====
-Gimme is a task/item decision maker!
-
+Gimme; a CLI decision maker.
